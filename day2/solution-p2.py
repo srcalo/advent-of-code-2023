@@ -1,15 +1,10 @@
 import re
-
-
+from collections import Counter
 
 def powerMin(s: str) -> int:
 	game = [x.split(" ")[1:] for x in s.replace(",", "").split(";")]
 	game[0] = game[0][1:]
-	colorMax = {
-		'red': 0,
-		'green': 0,
-		'blue': 0
-	}
+	colorMax = Counter(['red','green','blue'])
 	for round in game:
 		for i in range(0, len(round), 2):
 			colorMax[round[i+1]] = max(colorMax[round[i+1]], int(round[i]))
