@@ -17,9 +17,9 @@ def isValid(s: str) -> int:
 				return 0
 	return id
 
-if __name__ == "__main__":
+def sol(fname):
 	sum = 0
-	with open("day2/input.txt") as f:
+	with open(fname) as f:
 		for line in f:
 			sum += isValid(line.strip("\n"))
 

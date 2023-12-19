@@ -1,8 +1,8 @@
 import re
 
-if __name__ == "__main__":
+def sol(fname):
 	sum = 0
-	with open("day1/input.txt") as f:
+	with open(fname) as f:
 		for line in f:
 			d = re.findall('\d',line)
 			sum += int(d[0] + d[-1])

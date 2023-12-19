@@ -1,13 +1,9 @@
-import argparse
 import logging
-from utils.log import init_logging
+from util import init_logging
 
-if __name__ == "__main__":
+def sol(fname):
 	init_logging()
 
-	ap = argparse.ArgumentParser()
-	ap.add_argument("file")
-	fname = vars(ap.parse_args())["file"]
 	sum = 0
 	schematic: list[str] = []
 	with open(fname) as f:

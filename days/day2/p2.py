@@ -10,9 +10,9 @@ def powerMin(s: str) -> int:
 			colorMax[round[i+1]] = max(colorMax[round[i+1]], int(round[i]))
 	return colorMax['red'] * colorMax['green'] * colorMax['blue']
 
-if __name__ == "__main__":
+def sol(fname):
 	sum = 0
-	with open("day2/input.txt") as f:
+	with open(fname) as f:
 		for line in f:
 			sum += powerMin(line.strip("\n"))
 
